@@ -109,13 +109,13 @@ public class wsMDW : System.Web.Services.WebService
         myConnection.Open();
 
         SqlDataReader myReader = null;
-        strCadSQL = "insert into tblusuarios (strLogin,strIdOrganizacion,strNombre,strDescripcion,strClave,dtmExpiracion,dtmExpiracionPwd"+
-        ",logCambioProxLogin,logPuedeCambiarClave,logCuentaActiva,logClaveNoExpira,lngMaxLogins,logImpersonalizar,logAdmin,strEMail,strAdsiId,logUsrDominio"+
+        strCadSQL = "insert into tblusuarios (strLogin,strIdOrganizacion,strNombre,strDescripcion,strClave,dtmExpiracion,dtmExpiracionPwd" +
+        ",logCambioProxLogin,logPuedeCambiarClave,logCuentaActiva,logClaveNoExpira,lngMaxLogins,logImpersonalizar,logAdmin,strEMail,strAdsiId,logUsrDominio" +
         ",strDominio,lngNroUsuario,lngTabPorDefecto,lngTabPorDefecto,strUsuario,dtmActualizacion) "
-        +"values("+strLogin+","+strIdOrganizacion+","+strNombre+","+strDescripcion+","+strClave+","+dtmExpiracion+","+dtmExpiracionPwd+","+
-        logCambioProxLogin+","+logPuedeCambiarClave+","+logCuentaActiva+","+logClaveNoExpira+","+lngMaxLogins+","+logImpersonalizar+","+
-        logAdmin+","+strEMail+","+strAdsiId+","+logUsrDominio+","+strDominio+","+lngNroUsuario+","+lngTabPorDefecto+","+
-        lngTabPorDefecto+","+strUsuario+","+dtmActualizacion+")"
+        + "values(" + strLogin + "," + strIdOrganizacion + "," + strNombre + "," + strDescripcion + "," + strClave + "," + dtmExpiracion + "," + dtmExpiracionPwd + "," +
+        logCambioProxLogin + "," + logPuedeCambiarClave + "," + logCuentaActiva + "," + logClaveNoExpira + "," + lngMaxLogins + "," + logImpersonalizar + "," +
+        logAdmin + "," + strEMail + "," + strAdsiId + "," + logUsrDominio + "," + strDominio + "," + lngNroUsuario + "," + lngTabPorDefecto + "," +
+        lngTabPorDefecto + "," + strUsuario + "," + dtmActualizacion + ")";
         
         SqlCommand myCommand = new SqlCommand(strCadSQL, myConnection);
 
@@ -123,41 +123,3 @@ public class wsMDW : System.Web.Services.WebService
         return myReader.ToString();
     }
 }
-/*
-    /// <summary>
-    /// Retorna un numero entero aleatorio entre 1 y 100
-    /// </summary>
-    [WebMethod]
-    public int CRUD_Insercion(int )
-    {
-        Random rnd = new Random();
-        return rnd.Next(1, 100);
-    }
-    [WebMethod]
-    public int CRUD_Recuperacion()
-    {
-        sentencia = "select * from tblUsuarios with (nolock)";
-        return ds;
-    }
-    [WebMethod]
-    public int CRUD_Modificacion()
-    {
-        return 0;
-    }
-    [WebMethod]
-    public int CRUD_Eliminacion()
-    {
-        return 0;
-    }
-    /// <summary>
-    /// suma dos numeros enteros    
-    /// </summary>
-    ///<param name="sumando1">Sumando 1</param>
-    ///<param name="sumando2">Sumando 2</param>
-    /// <returns>resultado</returns>
-    [WebMethod]
-    public int suma(int sumando1, int sumando2)
-    {
-        return sumando1 + sumando2;
-    }
-*/
